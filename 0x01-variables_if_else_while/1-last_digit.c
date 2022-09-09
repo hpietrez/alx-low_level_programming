@@ -6,6 +6,7 @@
  * main - entry point
  * Description: Get a random, check its last digit
  * compare last digit with 5
+ * Return: 0
  */
 
 int main(void)
