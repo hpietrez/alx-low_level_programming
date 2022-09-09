@@ -4,7 +4,8 @@
 
 /**
  * main - entry point
- * 
+ * Description: Get a random number
+ * print the number if positive, zero or negative
  * Return: 0
  */
 
