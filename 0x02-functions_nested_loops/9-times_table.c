@@ -17,7 +17,9 @@ void times_table(void)
 		{
 			_putchar(48);
 			_putchar(' ');
+
 			prod = (num * mply);
+
 				if (prod <= 9)
 					_putchar(' ');
 				else
