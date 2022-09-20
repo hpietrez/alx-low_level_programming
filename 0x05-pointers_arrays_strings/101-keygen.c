@@ -12,28 +12,26 @@
 
 int main(void)
 {
-	int ascii = 2772, i = 0, j, random;
-	char password[100];
-	time_t t;
+	char k[200];
+	int num = 0;
+	int random = 0;
+	char *key = k;
 
-	srand((int) time(&t));
-	while (ascii > 126)
-	{
-		random = rand() % 126;
-		password[i] = random;
-		ascii -= random;
-		i++;
-	}
-	if (ascii > 0)
-		password[i] = ascii;
-	else
-	{
-		i--;
-	}
+	srand(time(NULL));
 
-	for (j = 0; j <= i; j++)
+	while (num < 2645)
 	{
-		printf("%c", password[j]);
+		random = rand() % 122;
+
+		if (random > 32)
+		{
+			*key = random;
+			key = key + 1;
+			num += random;
+		}
 	}
+	*key = (2772 - num);
+	*(key + 1) = '\n';
+	printf("%s", k);
 	return (0);
 }
